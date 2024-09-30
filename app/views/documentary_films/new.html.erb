@@ -1,0 +1,34 @@
+<h1>New Documentary Film</h1>
+
+<%= form_with(model: @documentary_film, local: true) do |form| %>
+  <% if @documentary_film.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@documentary_film.errors.count, "error") %> prohibited this documentary film from being saved:</h2>
+
+      <ul>
+        <% @documentary_film.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :synopsis %>
+    <%= form.text_area :synopsis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :director %>
+    <%= form.text_field :director %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

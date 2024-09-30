@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Movie.create(name: 'Inception', synopsis: 'A mind-bending thriller', director: 'Christopher Nolan')
+Serie1.create(name: 'Breaking Bad', synopsis: 'A high school chemistry teacher turned meth producer', director: 'Vince Gilligan')
+DocumentaryFilm.create(name: 'Planet Earth', synopsis: 'A documentary series about the natural world', director: 'David Attenborough')

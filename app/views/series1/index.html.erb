@@ -1,0 +1,9 @@
+<h1>Series</h1>
+
+<% @series1.each do |serie1| %>
+  <p><strong>Name:</strong> <%= serie1.name %></p>
+  <p><strong>Synopsis:</strong> <%= serie1.synopsis %></p>
+  <p><strong>Director:</strong> <%= serie1.director %></p>
+<% end %>
+
+<%= link_to 'New Series', new_series1_path %>
